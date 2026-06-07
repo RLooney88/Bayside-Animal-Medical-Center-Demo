@@ -59,17 +59,19 @@ export default function DynamicHero() {
         data-testid="hero-image"
       />
 
-      {/* Dark gradient for text legibility */}
-      <div className="absolute inset-0 bg-gradient-to-br from-clinic-navy/92 via-clinic-navy/68 to-clinic-navy/22" />
-      <div className="absolute inset-0 bg-gradient-to-r from-clinic-ink/36 via-transparent to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-clinic-ink/84 via-transparent to-transparent" />
-      <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-clinic-ink/55 to-transparent" />
+      {/* Strong brand scrim for text legibility over busy photography */}
+      <div className="absolute inset-0 bg-clinic-ink/28" />
+      <div className="absolute inset-0 bg-gradient-to-br from-clinic-navy/96 via-clinic-navy/78 to-clinic-navy/34" />
+      <div className="absolute inset-0 bg-gradient-to-r from-clinic-ink/64 via-clinic-ink/20 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-clinic-ink/88 via-clinic-ink/18 to-transparent" />
+      <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-clinic-ink/78 to-transparent" />
+      <div className="absolute left-0 bottom-0 top-0 w-full max-w-[860px] bg-gradient-to-r from-clinic-ink/38 via-clinic-ink/18 to-transparent" />
       <div className="absolute inset-0 grain pointer-events-none" aria-hidden="true" />
 
       {/* Content */}
       <div className="relative z-10 h-full">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 h-full flex flex-col justify-end pt-28 pb-20 lg:pt-32 lg:pb-24">
-          <div className="max-w-[720px] animate-fade-up">
+          <div className="max-w-[720px] animate-fade-up drop-shadow-[0_3px_18px_rgba(0,0,0,0.42)]">
             {eyebrow && (
               <div className="mb-5" data-testid="hero-eyebrow-row">
                 <span
@@ -82,7 +84,7 @@ export default function DynamicHero() {
             )}
 
             <h1
-              className="font-display text-5xl sm:text-6xl lg:text-[76px] xl:text-[82px] leading-[1.02] font-extrabold tracking-tight text-sand-50"
+              className="font-display text-5xl sm:text-6xl lg:text-[76px] xl:text-[82px] leading-[1.02] font-extrabold tracking-tight text-sand-50 drop-shadow-[0_4px_20px_rgba(0,0,0,0.52)]"
               data-testid="hero-headline"
             >
               {headline}
@@ -90,7 +92,7 @@ export default function DynamicHero() {
 
             {subheadline && (
               <p
-                className="mt-6 max-w-2xl text-base sm:text-lg lg:text-[19px] text-sand-50/95 leading-relaxed drop-shadow-sm"
+                className="mt-6 max-w-2xl text-base sm:text-lg lg:text-[19px] text-sand-50 leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)]"
                 data-testid="hero-subheadline"
               >
                 {subheadline}
