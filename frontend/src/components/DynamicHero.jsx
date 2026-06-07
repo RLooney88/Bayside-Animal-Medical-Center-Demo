@@ -60,8 +60,9 @@ export default function DynamicHero() {
       />
 
       {/* Dark gradient for text legibility */}
-      <div className="absolute inset-0 bg-gradient-to-br from-clinic-navy/88 via-clinic-navy/58 to-clinic-navy/18" />
-      <div className="absolute inset-0 bg-gradient-to-t from-clinic-ink/82 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-br from-clinic-navy/92 via-clinic-navy/68 to-clinic-navy/22" />
+      <div className="absolute inset-0 bg-gradient-to-r from-clinic-ink/36 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-clinic-ink/84 via-transparent to-transparent" />
       <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-clinic-ink/55 to-transparent" />
       <div className="absolute inset-0 grain pointer-events-none" aria-hidden="true" />
 
@@ -89,7 +90,7 @@ export default function DynamicHero() {
 
             {subheadline && (
               <p
-                className="mt-6 max-w-2xl text-base sm:text-lg lg:text-[19px] text-sand-50/90 leading-relaxed"
+                className="mt-6 max-w-2xl text-base sm:text-lg lg:text-[19px] text-sand-50/95 leading-relaxed drop-shadow-sm"
                 data-testid="hero-subheadline"
               >
                 {subheadline}
