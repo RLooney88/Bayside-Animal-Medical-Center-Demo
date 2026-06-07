@@ -43,7 +43,7 @@ export default function DynamicHero() {
 
   return (
     <section
-      className="relative w-full min-h-[680px] h-[92vh] overflow-hidden"
+      className="relative w-full h-[92vh] min-h-[640px] overflow-hidden"
       data-testid="dynamic-hero"
       data-matched-switch={matched || "default"}
       data-inferred-intent={inferredIntent || "none"}
@@ -59,21 +59,17 @@ export default function DynamicHero() {
         data-testid="hero-image"
       />
 
-      {/* Strong brand scrim for text legibility over busy photography */}
-      <div className="absolute inset-0 bg-clinic-ink/28" />
-      <div className="absolute inset-0 bg-gradient-to-br from-clinic-navy/96 via-clinic-navy/78 to-clinic-navy/34" />
-      <div className="absolute inset-0 bg-gradient-to-r from-clinic-ink/64 via-clinic-ink/20 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-clinic-ink/88 via-clinic-ink/18 to-transparent" />
-      <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-clinic-ink/78 to-transparent" />
-      <div className="absolute left-0 bottom-0 top-0 w-full max-w-[860px] bg-gradient-to-r from-clinic-ink/38 via-clinic-ink/18 to-transparent" />
+      {/* Dark gradient for text legibility */}
+      <div className="absolute inset-0 bg-gradient-to-br from-clinic-navy/85 via-clinic-navy/55 to-clinic-navy/20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-clinic-ink/80 via-transparent to-transparent" />
       <div className="absolute inset-0 grain pointer-events-none" aria-hidden="true" />
 
       {/* Content */}
       <div className="relative z-10 h-full">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 h-full flex flex-col justify-end pt-28 pb-20 lg:pt-32 lg:pb-24">
-          <div className="max-w-[720px] animate-fade-up drop-shadow-[0_3px_18px_rgba(0,0,0,0.42)]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 h-full flex flex-col justify-end pb-20 lg:pb-28">
+          <div className="max-w-3xl animate-fade-up">
             {eyebrow && (
-              <div className="mb-5" data-testid="hero-eyebrow-row">
+              <div className="mb-6" data-testid="hero-eyebrow-row">
                 <span
                   className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.22em] font-bold text-sand-50/90"
                   data-testid="hero-eyebrow"
@@ -84,7 +80,7 @@ export default function DynamicHero() {
             )}
 
             <h1
-              className="font-display text-5xl sm:text-6xl lg:text-[76px] xl:text-[82px] leading-[1.02] font-extrabold tracking-tight text-sand-50 drop-shadow-[0_4px_20px_rgba(0,0,0,0.52)]"
+              className="font-display text-5xl sm:text-6xl lg:text-[88px] leading-[0.98] font-extrabold tracking-tight text-sand-50"
               data-testid="hero-headline"
             >
               {headline}
@@ -92,14 +88,14 @@ export default function DynamicHero() {
 
             {subheadline && (
               <p
-                className="mt-6 max-w-2xl text-base sm:text-lg lg:text-[19px] text-sand-50 leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)]"
+                className="mt-6 max-w-xl text-lg lg:text-xl text-sand-100/90 leading-relaxed"
                 data-testid="hero-subheadline"
               >
                 {subheadline}
               </p>
             )}
 
-            <div className="mt-9 flex flex-wrap items-center gap-5">
+            <div className="mt-10 flex flex-wrap items-center gap-4">
               {!parentIntent ? (
                 <AnimalButtons variant="hero" />
               ) : (
