@@ -16,7 +16,7 @@ from sqlalchemy import select
 
 from auth import hash_password
 from database import AsyncSessionLocal, Base, engine
-from models import Surface, Switch, User
+from models import AppointmentType, ClinicHours, StaffConfig, Surface, Switch, User
 
 logger = logging.getLogger(__name__)
 
@@ -69,7 +69,7 @@ async def seed() -> None:
             user = User(
                 email=admin_email,
                 password_hash=hash_password(admin_password),
-                name="Vet Clinic Admin",
+                name="Bayside Animal Admin",
                 role="admin",
             )
             db.add(user)
@@ -134,6 +134,59 @@ async def seed() -> None:
 
                 switch = Switch(surface_id=surface.id, **sw_spec)
                 db.add(switch)
+
+        # --- Booking configuration ---
+        bayside_hours = {
+            0: (True, 8 * 60 + 30, 19 * 60),
+            1: (True, 8 * 60 + 30, 19 * 60),
+            2: (True, 8 * 60 + 30, 19 * 60),
+            3: (True, 8 * 60 + 30, 19 * 60),
+            4: (True, 8 * 60 + 30, 18 * 60),
+            5: (True, 8 * 60 + 30, 13 * 60),
+            6: (False, 8 * 60 + 30, 13 * 60),
+        }
+        for day_of_week, (is_open, open_minutes, close_minutes) in bayside_hours.items():
+            res = await db.execute(select(ClinicHours).where(ClinicHours.day_of_week == day_of_week))
+            row = res.scalar_one_or_none()
+            if not row:
+                row = ClinicHours(day_of_week=day_of_week)
+                db.add(row)
+            row.is_open = is_open
+            row.open_minutes = open_minutes
+            row.close_minutes = close_minutes
+
+        res = await db.execute(select(StaffConfig).limit(1))
+        staff_config = res.scalar_one_or_none()
+        if not staff_config:
+            staff_config = StaffConfig()
+            db.add(staff_config)
+        staff_config.num_doctors = 8
+        staff_config.num_techs = 6
+        staff_config.slot_granularity_mins = 30
+        staff_config.booking_window_days = 21
+        staff_config.min_lead_time_hours = 4
+
+        appointment_types = [
+            ("Wellness Exam", "Preventive care, vaccines, and annual checkups for established or new patients.", 30, 30, 30, "#001B67", 10),
+            ("Sick Pet Visit", "Medical exam for non-emergency illness, discomfort, or behavior changes.", 30, 30, 30, "#CD1C30", 20),
+            ("Dental Consultation", "Oral health evaluation and dental cleaning planning.", 30, 30, 30, "#43D4FF", 30),
+            ("Exotic Pet Consultation", "Care guidance for birds, rabbits, most small mammals, and non-venomous reptiles; call first for unusual species.", 45, 45, 45, "#003377", 40),
+            ("Acupuncture Consultation", "Integrative care consult for acupuncture or Chinese herbal medicine with Bayside's trained veterinary team.", 45, 45, 45, "#B3C0D1", 50),
+            ("Grooming Consultation", "Grooming service discussion and pet comfort planning.", 30, 0, 30, "#EFE7D3", 60),
+        ]
+        for name, description, duration_mins, doctor_mins, tech_mins, color, sort_order in appointment_types:
+            res = await db.execute(select(AppointmentType).where(AppointmentType.name == name))
+            row = res.scalar_one_or_none()
+            if not row:
+                row = AppointmentType(name=name)
+                db.add(row)
+            row.description = description
+            row.duration_mins = duration_mins
+            row.doctor_mins = doctor_mins
+            row.tech_mins = tech_mins
+            row.color = color
+            row.sort_order = sort_order
+            row.active = True
 
         await db.commit()
         logger.info("Seed complete from %s (refresh_existing=%s).", SEED_PATH, refresh_existing)

@@ -1,69 +1,135 @@
 {
   "practice": {
-    "name": "Veterinary Practice Name",
-    "shortName": "Vet Clinic",
-    "displayLines": ["Veterinary", "Clinic"],
-    "tagline": "Compassionate veterinary care for pets and families.",
-    "description": "A local veterinary practice providing thoughtful, modern care for pets and their people.",
-    "serviceArea": "Your City, ST"
+    "name": "Bayside Animal Medical Center",
+    "shortName": "Bayside Animal",
+    "displayLines": [
+      "Bayside Animal",
+      "Medical Center"
+    ],
+    "tagline": "Full-service veterinary care in Severna Park since 1996.",
+    "description": "Bayside Animal Medical Center is a full-service veterinary hospital in Severna Park, Maryland, providing preventive medicine, diagnostics, surgery, dentistry, acupuncture, exotic pet care, grooming, pharmacy, and compassionate care for pets and their families.",
+    "serviceArea": "Severna Park, Arnold, Millersville, Annapolis, Pasadena, and Glen Burnie, MD"
   },
   "brand": {
-    "logo": "/brand/logo-placeholder.svg",
-    "logoAlt": "Veterinary practice logo",
+    "logo": "/brand/bayside-logo.png",
+    "logoAlt": "Bayside Animal Medical Center logo",
     "colors": {
-      "light": "#FDFBF7",
-      "dark": "#1A2B4C",
-      "accent": "#C8382E",
-      "accentLight": "#E8F0EB"
+      "light": "#F3F7FB",
+      "dark": "#001B67",
+      "accent": "#43D4FF",
+      "accentLight": "#DDEFFA"
     }
   },
   "contact": {
-    "phone": "(000) 000-0000",
-    "phoneHref": "tel:+10000000000",
-    "email": "hello@example.com",
+    "phone": "(410) 544-4423",
+    "phoneHref": "tel:+14105444423",
+    "email": "info@baysideanimal.com",
     "address": {
-      "street": "123 Main Street",
-      "line2": "Suite 100",
-      "city": "Your City",
-      "state": "ST",
-      "zip": "00000",
+      "street": "848 Ritchie Hwy",
+      "line2": "",
+      "city": "Severna Park",
+      "state": "MD",
+      "zip": "21146",
       "country": "US"
     }
   },
   "hours": [
-    ["Monday", "8:00 AM – 5:00 PM"],
-    ["Tuesday", "8:00 AM – 5:00 PM"],
-    ["Wednesday", "8:00 AM – 5:00 PM"],
-    ["Thursday", "8:00 AM – 5:00 PM"],
-    ["Friday", "8:00 AM – 5:00 PM"],
-    ["Saturday", "Closed"],
-    ["Sunday", "Closed"]
+    [
+      "Monday",
+      "8:30 AM \u2013 7:00 PM"
+    ],
+    [
+      "Tuesday",
+      "8:30 AM \u2013 7:00 PM"
+    ],
+    [
+      "Wednesday",
+      "8:30 AM \u2013 7:00 PM"
+    ],
+    [
+      "Thursday",
+      "8:30 AM \u2013 7:00 PM"
+    ],
+    [
+      "Friday",
+      "8:30 AM \u2013 6:00 PM"
+    ],
+    [
+      "Saturday",
+      "8:30 AM \u2013 1:00 PM"
+    ],
+    [
+      "Sunday",
+      "Closed"
+    ]
   ],
   "links": {
-    "website": "",
-    "appointment": "",
-    "store": "",
-    "pharmacy": "",
-    "onlineForms": "",
-    "facebook": "",
+    "website": "https://baysideanimal.com/",
+    "appointment": "/appointment",
+    "store": "https://baysideanimal.com/online-store/",
+    "pharmacy": "https://baysideanimal.com/online-store/",
+    "onlineForms": "https://baysideanimal.com/client-communication/",
+    "facebook": "https://facebook.com/baysideanimal",
     "instagram": "",
     "linkedin": "",
-    "googleBusinessProfile": ""
+    "googleBusinessProfile": "https://www.google.com/maps/place/Bayside+Animal+Medical+Center/@39.0636931,-76.5368093,17.13z/data=!4m7!3m6!1s0x89b7f99081448db7:0x891324e4eb815c9!8m2!3d39.063751!4d-76.5342429!9m1!1b1"
   },
   "team": [
     {
-      "name": "Team Member Name",
+      "name": "Lawrence F. Steinberg, DVM",
+      "role": "Owner / Veterinarian",
+      "bio": "Dr. Steinberg opened Bayside Animal Medical Center in February 1996 after earning his DVM from the University of Georgia.",
+      "image": ""
+    },
+    {
+      "name": "Alexandra F. Bray, VMD, CVA",
+      "role": "Partner / Veterinarian / Certified Veterinary Acupuncturist",
+      "bio": "Dr. Bray joined Bayside in 2008 and provides acupuncture and Chinese herbal medicine in addition to traditional veterinary care.",
+      "image": ""
+    },
+    {
+      "name": "Sondra Oliver, DVM",
       "role": "Veterinarian",
-      "bio": "Short professional bio placeholder.",
+      "bio": "Dr. Oliver graduated from the Virginia-Maryland Regional School of Veterinary Medicine in 1999.",
+      "image": ""
+    },
+    {
+      "name": "Kathryn Buchanan, VMD",
+      "role": "Veterinarian / Exotic Pet Care",
+      "bio": "Dr. Buchanan has a special interest in exotic animals and earned her VMD from the University of Pennsylvania in 2012.",
+      "image": ""
+    },
+    {
+      "name": "Allyson DeLozier, VMD",
+      "role": "Veterinarian",
+      "bio": "Dr. DeLozier has interests in exotic animal medicine, soft tissue surgery, and some orthopedic surgery.",
+      "image": ""
+    },
+    {
+      "name": "Brittney Beigel, DVM",
+      "role": "Veterinarian",
+      "bio": "Dr. Beigel joined Bayside in 2020 and is a Severna Park native.",
+      "image": ""
+    },
+    {
+      "name": "Rebekah Sims, DVM",
+      "role": "Veterinarian",
+      "bio": "Dr. Sims focuses on preventive and integrative care, including acupuncture and hospice care training.",
+      "image": ""
+    },
+    {
+      "name": "Julia Langfitt, DVM",
+      "role": "Veterinarian",
+      "bio": "Dr. Langfitt has practiced small animal medicine internationally and returned to Maryland in 2023.",
       "image": ""
     }
   ],
   "features": {
     "clientPortal": true,
     "onlineBooking": true,
-    "storeLink": false,
-    "pharmacyLink": false,
-    "onlineFormsLink": false,
+    "storeLink": true,
+    "pharmacyLink": true,
+    "onlineFormsLink": true,
     "teamSection": true
   }
 }

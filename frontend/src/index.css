@@ -1,4 +1,4 @@
-﻿@tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -24,26 +24,26 @@ code {
 @layer base {
   :root {
     /* Site template brand palette. Values are RGB triplets so Tailwind opacity modifiers work. */
-    --sand-50: 253 251 247;
-    --sand-100: 247 242 232;
-    --sand-200: 239 230 211;
-    --sand-300: 229 225 216;
-    --clinic-navy: 26 43 76;
-    --clinic-navy-hover: 38 59 102;
-    --clinic-forest: 44 85 69;
-    --clinic-forest-hover: 58 110 89;
-    --clinic-sage: 232 240 235;
-    --clinic-sage-deep: 212 226 216;
-    --clinic-red: 200 56 46;
-    --clinic-red-hover: 166 44 35;
-    --clinic-red-soft: 249 230 226;
-    --clinic-peach: 251 238 222;
-    --clinic-peach-deep: 245 223 196;
-    --clinic-cream: 253 247 237;
-    --clinic-amber: 232 180 88;
-    --clinic-amber-soft: 251 232 194;
-    --clinic-ink: 14 27 54;
-    --clinic-mist: 90 107 130;    --background: 38 50% 97%;
+    --sand-50: 243 247 251;
+    --sand-100: 221 239 250;
+    --sand-200: 179 192 209;
+    --sand-300: 147 166 190;
+    --clinic-navy: 0 27 103;
+    --clinic-navy-hover: 0 51 119;
+    --clinic-forest: 0 51 119;
+    --clinic-forest-hover: 0 27 103;
+    --clinic-sage: 221 239 250;
+    --clinic-sage-deep: 179 192 209;
+    --clinic-red: 205 28 48;
+    --clinic-red-hover: 160 20 37;
+    --clinic-red-soft: 255 231 235;
+    --clinic-peach: 239 231 211;
+    --clinic-peach-deep: 221 207 179;
+    --clinic-cream: 243 247 251;
+    --clinic-amber: 67 212 255;
+    --clinic-amber-soft: 221 239 250;
+    --clinic-ink: 0 7 17;
+    --clinic-mist: 82 113 153;    --background: 38 50% 97%;
     --foreground: 220 48% 20%;
     --card: 0 0% 100%;
     --card-foreground: 220 48% 20%;
