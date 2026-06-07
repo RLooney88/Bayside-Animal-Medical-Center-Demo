@@ -10,8 +10,8 @@
       "description": "Main hero on the homepage, swaps copy + image per intent.",
       "default_content": {
         "eyebrow": "Full-Service Veterinary Hospital in Severna Park",
-        "headline": "Advanced, compassionate care for pets on the Broadneck Peninsula.",
-        "subheadline": "Bayside Animal Medical Center blends preventive medicine, diagnostics, surgery, dentistry, acupuncture, exotic pet care, grooming, and pharmacy support under one roof.",
+        "headline": "Compassionate care for pets on the Broadneck Peninsula.",
+        "subheadline": "Bayside Animal Medical Center brings wellness, diagnostics, surgery, dentistry, acupuncture, exotic pet care, grooming, and pharmacy support together under one roof.",
         "primary_cta_label": "Request an Appointment",
         "primary_cta_href": "/appointment",
         "secondary_cta_label": "Call (410) 544-4423",

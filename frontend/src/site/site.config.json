@@ -14,10 +14,13 @@
     "logo": "/brand/bayside-logo.png",
     "logoAlt": "Bayside Animal Medical Center logo",
     "colors": {
-      "light": "#F3F7FB",
-      "dark": "#001B67",
-      "accent": "#43D4FF",
-      "accentLight": "#DDEFFA"
+      "light": "#F8FAFC",
+      "dark": "#003C78",
+      "accent": "#005CAA",
+      "accentLight": "#DDEFFA",
+      "sand": "#F0D8C0",
+      "tan": "#D8A878",
+      "periwinkle": "#9CA8CC"
     }
   },
   "contact": {

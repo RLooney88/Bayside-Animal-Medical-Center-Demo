@@ -63,25 +63,17 @@ export default function Navbar() {
       data-testid="site-navbar"
       data-transparent={transparent ? "true" : "false"}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center gap-3 shrink-0" data-testid="nav-logo-link">
+      <div className="max-w-7xl mx-auto px-5 lg:px-10 xl:px-12">
+        <div className="flex items-center justify-between h-[76px] gap-6">
+          <Link to="/" className="flex items-center shrink-0 max-w-[210px] xl:max-w-[245px]" data-testid="nav-logo-link">
             <img
               src={brand.logo}
               alt={brand.logoAlt || practice.name}
-              className={`h-12 w-auto rounded-xl transition-all ${transparent ? "bg-white/90 p-1" : ""}`}
+              className={`h-11 w-auto max-w-full object-contain rounded-xl transition-all ${transparent ? "bg-white/95 p-1.5 shadow-sm" : ""}`}
             />
-            <div className="hidden sm:block leading-tight">
-              <div className={`font-display font-extrabold text-[17px] transition-colors ${transparent ? "text-sand-50" : "text-clinic-navy"}`}>
-                {practice.displayLines?.[0] || practice.name}
-              </div>
-              <div className={`text-[12px] uppercase tracking-[0.18em] font-semibold transition-colors ${transparent ? "text-clinic-amber" : "text-clinic-forest"}`}>
-                {practice.displayLines?.[1] || practice.shortName}
-              </div>
-            </div>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex flex-1 items-center justify-end gap-4 xl:gap-6 min-w-0">
             {nav.slice(0, 1).map((n) => (
               <NavLink
                 key={n.to}
@@ -97,8 +89,8 @@ export default function Navbar() {
             {/* Animals We Serve, dropdown (also a signal surface) */}
             <DropdownMenu open={animalsOpen} onOpenChange={setAnimalsOpen}>
               <DropdownMenuTrigger
-                className={`inline-flex items-center gap-1 text-sm font-semibold focus:outline-none transition-colors ${
-                  transparent ? "text-sand-50/90 hover:text-clinic-amber" : "text-clinic-ink hover:text-clinic-forest"
+                className={`inline-flex items-center gap-1 text-[13px] xl:text-sm font-semibold focus:outline-none whitespace-nowrap transition-colors ${
+                  transparent ? "text-sand-50/95 hover:text-clinic-amber" : "text-clinic-ink hover:text-clinic-forest"
                 }`}
                 data-testid="nav-animals-trigger"
               >
@@ -157,15 +149,15 @@ export default function Navbar() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 shrink-0 ml-2 xl:ml-6">
             <a
               href={isExternalAppointment ? appointmentHref : contact.phoneHref}
               target={isExternalAppointment ? "_blank" : undefined}
               rel={isExternalAppointment ? "noreferrer" : undefined}
-              className={`hidden md:inline-flex items-center gap-2 rounded-full px-5 py-3 font-semibold text-sm transition-colors ${
+              className={`hidden md:inline-flex items-center gap-2 rounded-full px-5 xl:px-6 py-3 font-semibold text-sm whitespace-nowrap shadow-lg transition-colors ${
                 transparent
-                  ? "bg-clinic-red hover:bg-clinic-red-hover text-white"
-                  : "bg-clinic-navy hover:bg-clinic-navy-hover text-white"
+                  ? "bg-clinic-red/95 hover:bg-clinic-red-hover text-white shadow-clinic-navy/25"
+                  : "bg-clinic-navy hover:bg-clinic-navy-hover text-white shadow-clinic-navy/15"
               }`}
               data-testid="nav-call-btn"
             >
@@ -239,11 +231,11 @@ export default function Navbar() {
 
 function linkCls(transparent, isActive) {
   if (transparent) {
-    return `text-sm font-semibold transition-colors ${
-      isActive ? "text-clinic-amber" : "text-sand-50/90 hover:text-clinic-amber"
+    return `text-[13px] xl:text-sm font-semibold whitespace-nowrap transition-colors ${
+      isActive ? "text-clinic-amber" : "text-sand-50/95 hover:text-clinic-amber"
     }`;
   }
-  return `text-sm font-semibold transition-colors ${
+  return `text-[13px] xl:text-sm font-semibold whitespace-nowrap transition-colors ${
     isActive ? "text-clinic-red" : "text-clinic-ink hover:text-clinic-red"
   }`;
 }

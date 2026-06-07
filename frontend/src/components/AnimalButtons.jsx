@@ -28,12 +28,12 @@ export default function AnimalButtons({ variant = "hero" }) {
 
   const baseBtn =
     variant === "hero"
-      ? "group inline-flex items-center justify-between gap-3 rounded-full pr-2 pl-5 py-2 font-semibold transition-all shadow-lg backdrop-blur-md"
-      : "group inline-flex items-center justify-between gap-3 rounded-full pr-2 pl-5 py-2 font-semibold transition-all";
+      ? "group inline-flex min-w-[132px] items-center justify-between gap-4 rounded-full pr-2.5 pl-5 py-2.5 font-semibold transition-all shadow-lg backdrop-blur-md"
+      : "group inline-flex min-w-[132px] items-center justify-between gap-4 rounded-full pr-2.5 pl-5 py-2.5 font-semibold transition-all";
 
   return (
     <div
-      className="flex flex-wrap items-center gap-3"
+      className="flex flex-wrap items-center gap-4 sm:gap-5"
       data-testid="animal-buttons"
     >
       {BUTTONS.map((b) => (
@@ -43,19 +43,19 @@ export default function AnimalButtons({ variant = "hero" }) {
           onClick={() => onPick(b)}
           className={`${baseBtn} ${
             variant === "hero"
-              ? "bg-white/95 hover:bg-white text-clinic-navy shadow-black/10"
+              ? "bg-white/96 hover:bg-white text-clinic-navy shadow-black/10 ring-1 ring-clinic-sage-deep/30"
               : "bg-clinic-navy hover:bg-clinic-navy-hover text-white"
           }`}
           data-testid={`hero-animal-${b.intent}`}
         >
-          <span className="inline-flex items-center gap-2">
+          <span className="inline-flex items-center gap-2 whitespace-nowrap text-sm">
             <b.Icon className="h-4 w-4 text-clinic-forest" strokeWidth={2.2} />
             {b.label}
           </span>
           <span
             className={`h-9 w-9 rounded-full grid place-items-center transition-transform group-hover:scale-110 ${
               variant === "hero"
-                ? "bg-clinic-red text-white"
+                ? "bg-clinic-red text-white shadow-inner"
                 : "bg-white/15 text-white"
             }`}
           >

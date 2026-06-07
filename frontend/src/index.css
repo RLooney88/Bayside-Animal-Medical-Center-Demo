@@ -24,26 +24,26 @@ code {
 @layer base {
   :root {
     /* Site template brand palette. Values are RGB triplets so Tailwind opacity modifiers work. */
-    --sand-50: 243 247 251;
-    --sand-100: 221 239 250;
-    --sand-200: 179 192 209;
-    --sand-300: 147 166 190;
-    --clinic-navy: 0 27 103;
-    --clinic-navy-hover: 0 51 119;
-    --clinic-forest: 0 51 119;
-    --clinic-forest-hover: 0 27 103;
+    --sand-50: 248 250 252;
+    --sand-100: 240 228 204;
+    --sand-200: 228 204 180;
+    --sand-300: 216 180 144;
+    --clinic-navy: 0 60 120;
+    --clinic-navy-hover: 0 45 98;
+    --clinic-forest: 0 75 136;
+    --clinic-forest-hover: 0 60 120;
     --clinic-sage: 221 239 250;
-    --clinic-sage-deep: 179 192 209;
-    --clinic-red: 205 28 48;
-    --clinic-red-hover: 160 20 37;
-    --clinic-red-soft: 255 231 235;
-    --clinic-peach: 239 231 211;
-    --clinic-peach-deep: 221 207 179;
-    --clinic-cream: 243 247 251;
-    --clinic-amber: 67 212 255;
-    --clinic-amber-soft: 221 239 250;
-    --clinic-ink: 0 7 17;
-    --clinic-mist: 82 113 153;    --background: 38 50% 97%;
+    --clinic-sage-deep: 156 168 204;
+    --clinic-red: 0 92 170;
+    --clinic-red-hover: 0 60 120;
+    --clinic-red-soft: 221 239 250;
+    --clinic-peach: 240 216 192;
+    --clinic-peach-deep: 216 168 120;
+    --clinic-cream: 240 228 204;
+    --clinic-amber: 216 168 120;
+    --clinic-amber-soft: 240 228 204;
+    --clinic-ink: 0 18 45;
+    --clinic-mist: 82 113 153;    --background: 210 38% 98%;
     --foreground: 220 48% 20%;
     --card: 0 0% 100%;
     --card-foreground: 220 48% 20%;
@@ -55,7 +55,7 @@ code {
     --secondary-foreground: 148 32% 25%;
     --muted: 38 20% 95%;
     --muted-foreground: 216 17% 43%;
-    --accent: 4 62% 48%;
+    --accent: 205 100% 33%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 98%;
@@ -65,8 +65,8 @@ code {
     --radius: 1rem;
     --chart-1: 148 32% 25%;
     --chart-2: 220 48% 20%;
-    --chart-3: 15 62% 57%;
-    --chart-4: 38 66% 63%;
+    --chart-3: 32 50% 66%;
+    --chart-4: 206 55% 71%;
     --chart-5: 200 50% 45%;
   }
   .dark {
