@@ -35,7 +35,7 @@ export default function TeamSection() {
         Meet the people caring for your pet.
       </h2>
 
-      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {members.map((m, i) => (
           <article
             key={`${m.name}-${i}`}
